@@ -13,8 +13,8 @@
     <!-- Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
     
     <script>
@@ -87,16 +87,57 @@
                             <div>
                                 <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Discover</h4>
                                 <ul class="space-y-3">
-                                    <li><button data-route="top" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><div class="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500"><i data-lucide="trophy" class="w-4 h-4"></i></div><span>Top Rated</span></button></li>
-                                    <li><button data-route="upcoming" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500"><i data-lucide="calendar-clock" class="w-4 h-4"></i></div><span>Upcoming Seasons</span></button></li>
-                                    <li><button data-route="archive" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500"><i data-lucide="archive" class="w-4 h-4"></i></div><span>Seasonal Archive</span></button></li>
+                                    <li>
+                                        <button data-route="top" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                            <div class="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500"><i data-lucide="trophy" class="w-4 h-4"></i></div>
+                                            <div>
+                                                <span class="block text-gray-900 dark:text-white font-bold">Top Rated</span>
+                                                <span class="text-xs text-gray-500">All-time favorites</span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-route="upcoming" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                            <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500"><i data-lucide="calendar-clock" class="w-4 h-4"></i></div>
+                                            <div>
+                                                <span class="block text-gray-900 dark:text-white font-bold">Upcoming Seasons</span>
+                                                <span class="text-xs text-gray-500">What's next</span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button data-route="archive" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                            <div class="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500"><i data-lucide="archive" class="w-4 h-4"></i></div>
+                                            <div>
+                                                <span class="block text-gray-900 dark:text-white font-bold">Seasonal Archive</span>
+                                                <span class="text-xs text-gray-500">Browse past years</span>
+                                            </div>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                             <div>
                                 <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Personal</h4>
                                 <ul class="space-y-3">
-                                    <li><button data-route="library" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500"><i data-lucide="library" class="w-4 h-4"></i></div><span>My Library</span></button></li>
-                                    <li><button onclick="window.ui.openPreferences()" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500"><i data-lucide="settings" class="w-4 h-4"></i></div><span>Preferences</span></button></li>
+                                    <li>
+                                        <button data-route="library" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                            <div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500"><i data-lucide="library" class="w-4 h-4"></i></div>
+                                            <div>
+                                                <span class="block text-gray-900 dark:text-white font-bold">My Library</span>
+                                                <span class="text-xs text-gray-500">Track your progress</span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <!-- PREFERENCES OPTION -->
+                                    <li>
+                                        <button onclick="window.ui.openPreferences()" class="flex items-center gap-3 text-sm font-medium hover:text-brand-500 group/link text-left w-full p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                                            <div class="w-8 h-8 rounded-lg bg-gray-500/10 flex items-center justify-center text-gray-500"><i data-lucide="settings" class="w-4 h-4"></i></div>
+                                            <div>
+                                                <span class="block text-gray-900 dark:text-white font-bold">Preferences</span>
+                                                <span class="text-xs text-gray-500">Customize your experience</span>
+                                            </div>
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -126,12 +167,33 @@
                 <h2 class="text-xl font-bold font-display dark:text-white">Preferences</h2>
                 <button onclick="window.ui.closePreferences()" class="p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-full"><i data-lucide="x" class="w-5 h-5 text-gray-500"></i></button>
             </div>
+            
             <div class="p-6 overflow-y-auto space-y-8">
+                <!-- Appearance -->
                 <section>
                     <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Appearance</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <div class="font-bold dark:text-white text-sm">Theme</div>
+                                <div class="text-xs text-gray-500">Choose your preferred look</div>
+                            </div>
+                            <div class="flex bg-gray-100 dark:bg-white/5 rounded-lg p-1">
+                                <button onclick="window.ui.setTheme('light')" class="px-3 py-1.5 rounded-md text-xs font-bold transition-all" id="pref-theme-light">Light</button>
+                                <button onclick="window.ui.setTheme('dark')" class="px-3 py-1.5 rounded-md text-xs font-bold transition-all" id="pref-theme-dark">Dark</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- System -->
+                <section>
+                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">System</h3>
                     <div class="flex justify-between items-center">
-                        <div><div class="font-bold dark:text-white text-sm">Theme</div><div class="text-xs text-gray-500">Choose your look</div></div>
-                        <button onclick="window.ui.setTheme(document.documentElement.classList.contains('dark')?'light':'dark')" class="bg-gray-100 dark:bg-white/5 px-4 py-2 rounded-lg text-sm font-bold">Toggle</button>
+                        <div>
+                            <div class="font-bold dark:text-white text-sm">Clear Cache</div>
+                            <div class="text-xs text-gray-500">Fix sync issues</div>
+                        </div>
+                        <button onclick="localStorage.clear(); window.location.reload()" class="text-red-500 text-xs font-bold hover:bg-red-500/10 px-3 py-1.5 rounded-lg border border-red-500/20">Clear Data</button>
                     </div>
                 </section>
             </div>
@@ -155,31 +217,41 @@
         <!-- Content injected by JS -->
     </main>
 
-    <!-- FOOTER (RESTORED) -->
+    <!-- FOOTER -->
     <footer class="border-t border-gray-200 dark:border-white/5 bg-white dark:bg-[#050505] py-16 mt-auto relative z-10">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            
             <!-- Brand -->
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-10 h-10 bg-black dark:bg-white text-white dark:text-black rounded-full flex items-center justify-center font-bold font-display text-xl">A</div>
-                    <div class="text-left"><span class="block text-xl font-bold font-display leading-none">ANITIME</span><span class="text-xs text-gray-500">Est. 2025</span></div>
+                    <div class="text-left">
+                        <span class="block text-xl font-bold font-display leading-none">ANITIME</span>
+                        <span class="text-xs text-gray-500">Est. 2025</span>
+                    </div>
                 </div>
-                <p class="text-sm text-gray-500 leading-relaxed mb-6">The ultimate automated anime platform.</p>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    The ultimate automated anime platform. Tracking, News, and Security all in one place.
+                </p>
                 <div class="flex gap-4">
                     <a href="#" class="text-gray-400 hover:text-brand-500 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
                     <a href="#" class="text-gray-400 hover:text-brand-500 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-brand-500 transition-colors"><i data-lucide="discord" class="w-5 h-5"></i></a>
                 </div>
             </div>
+
             <!-- Platform -->
             <div>
                 <h4 class="font-bold text-gray-900 dark:text-white mb-6 font-display">Platform</h4>
                 <ul class="space-y-4 text-sm text-gray-500">
                     <li><button data-route="now" class="hover:text-brand-500 transition-colors">Live Schedule</button></li>
                     <li><button data-route="upcoming" class="hover:text-brand-500 transition-colors">Upcoming Anime</button></li>
+                    <li><button data-route="top" class="hover:text-brand-500 transition-colors">Top Rated</button></li>
                     <li><button data-route="archive" class="hover:text-brand-500 transition-colors">Seasonal Archive</button></li>
                     <li><a href="/news" class="hover:text-brand-500 transition-colors">Latest News</a></li>
                 </ul>
             </div>
+
             <!-- Personal -->
             <div>
                 <h4 class="font-bold text-gray-900 dark:text-white mb-6 font-display">Personal</h4>
@@ -188,15 +260,19 @@
                     <li><button onclick="window.ui.openPreferences()" class="hover:text-brand-500 transition-colors">Preferences</button></li>
                 </ul>
             </div>
+
             <!-- Legal -->
             <div>
                 <h4 class="font-bold text-gray-900 dark:text-white mb-6 font-display">Legal</h4>
                 <ul class="space-y-4 text-sm text-gray-500">
-                    <li><a href="#" class="hover:text-brand-500 transition-colors">Privacy</a></li>
+                    <li><a href="#" class="hover:text-brand-500 transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-brand-500 transition-colors">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-brand-500 transition-colors">DMCA</a></li>
                     <li><a href="#" class="hover:text-brand-500 transition-colors">Contact</a></li>
                 </ul>
             </div>
         </div>
+        
         <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-gray-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
             <p>&copy; 2025 Anitime Media Group. All rights reserved.</p>
         </div>
@@ -208,7 +284,6 @@
             <button data-route="now" class="nav-item flex flex-col items-center gap-1 text-brand-500 active"><i data-lucide="home" class="w-6 h-6"></i><span class="text-[10px] font-bold">Home</span></button>
             <a href="/news" class="nav-item flex flex-col items-center gap-1 text-gray-400"><i data-lucide="newspaper" class="w-6 h-6"></i><span class="text-[10px] font-bold">News</span></a>
             <button data-route="library" class="nav-item flex flex-col items-center gap-1 text-gray-400"><i data-lucide="bookmark" class="w-6 h-6"></i><span class="text-[10px] font-bold">Library</span></button>
-            <button onclick="window.ui.openPreferences()" class="nav-item flex flex-col items-center gap-1 text-gray-400"><i data-lucide="settings-2" class="w-6 h-6"></i><span class="text-[10px] font-bold">Prefs</span></button>
         </div>
     </div>
 
